@@ -9,10 +9,10 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
+            <p className="text-secondary-foreground max-w-xl mx-auto">
               Have a project in mind or want to discuss opportunities? Feel free to reach out!
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-700 to-purple-500 mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end mx-auto mt-4"></div>
           </div>
           
           <motion.div 
@@ -20,7 +20,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-gray-900/70 rounded-xl p-6 border border-gray-800"
+            className="bg-background/30 rounded-xl p-3 md:p-6 border border-border"
           >
             <ContactForm />
           </motion.div>

@@ -1,8 +1,8 @@
-import { Background, Contact, Footer, Header, Hero, Projects, ScrollToTop, Skills } from "@/components";
+import { Background, Contact, Footer, Header, Hero, Projects, Skills } from "@/components";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900 text-gray-100 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gradient-start via-gradietn-mid to-gradient-end text-foreground overflow-x-hidden">
       <Background />
       <Header />
       <main>
@@ -12,7 +12,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <ScrollToTop />
     </div>
   );
 }

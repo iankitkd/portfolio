@@ -46,7 +46,7 @@ export default function ContactForm() {
       // } 
 
       setSuccess(false);
-      setResponse("Currently contact me service is unavailable.")
+      setResponse("Service unavailable.")
       setValue("name", "");
       setValue("email", "");
       setValue("message", "");
@@ -61,12 +61,12 @@ export default function ContactForm() {
   return (
     <form className="space-y-4" onSubmit={handleSubmit(sendEmail)}>
       <div>
-        <label htmlFor="name" className="pl-2 pb-2 block text-gray-300">Name</label>
+        <label htmlFor="name" className="pl-2 pb-1 block text-input-label">Name</label>
         <input
             {...register("name")}
             id="name"
             type="text"
-            className="w-full px-4 py-2 bg-gray-800 rounded-full focus:outline-none focus:ring-1 focus:ring-purple-500 text-white"
+            className="w-full px-4 py-3 bg-input text-input-foreground rounded-full focus:outline-none focus:ring-1 focus:ring-ring"
             placeholder="Your name"
         />
         {errors.name && (
@@ -75,12 +75,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="pl-2 pb-2 block text-gray-300">Email</label>
+        <label htmlFor="email" className="pl-2 pb-1 block text-input-label">Email</label>
         <input
             {...register("email")}
             id="email"
             type="email"
-            className="w-full px-4 py-2 bg-gray-800 rounded-full focus:outline-none focus:ring-1 focus:ring-purple-500 text-white"
+            className="w-full px-4 py-3 bg-input text-input-foreground rounded-full focus:outline-none focus:ring-1 focus:ring-ring"
             placeholder="your@email.com"
         />
         {errors.email && (
@@ -89,12 +89,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="pl-2 pb-2 block text-gray-300">Message</label>
+        <label htmlFor="message" className="pl-2 pb-1 block text-input-label">Message</label>
         <textarea
             {...register("message")}
             id="message"
             rows={4}
-            className="w-full px-4 py-2 bg-gray-800 rounded-2xl focus:outline-none focus:ring-1 focus:ring-purple-500 text-white"
+            className="w-full px-4 py-3 bg-input text-input-foreground rounded-2xl focus:outline-none focus:ring-1 focus:ring-ring"
             placeholder="Your message"
         />
         {errors.message && (
@@ -109,7 +109,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="px-8 py-3 bg-gradient-to-r from-purple-700 to-purple-500 rounded-full hover:opacity-90 transition-opacity"
+          className="px-8 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end rounded-full hover:opacity-90 transition-opacity"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>

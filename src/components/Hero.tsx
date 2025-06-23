@@ -14,7 +14,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-purple-400 mb-4"
+            className="text-primary-foreground mb-4"
           >
             Hello, I&apos;m
           </motion.div>
@@ -34,14 +34,14 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-2xl md:text-4xl mb-8"
           >
-            Full-Stack <span className="text-purple-400">Web Developer</span>
+            Full-Stack <span className="text-primary-foreground">Web Developer</span>
           </motion.h2>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg text-gray-400 mb-10 max-w-2xl"
+            className="text-lg text-secondary-foreground mb-10 max-w-2xl"
           >
             {heroData.description}
           </motion.p>
@@ -61,10 +61,10 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-wrap gap-4"
           >
-            <Link href="#projects" className="px-6 py-3 bg-gradient-to-r from-purple-700 to-purple-500 rounded-full hover:opacity-90 transition-opacity">
+            <Link href="#projects" className="px-6 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end rounded-full hover:opacity-90 transition-opacity">
               View Projects
             </Link>
-            <Link href="#contact" className="px-6 py-3 border border-purple-500 text-purple-400 rounded-full hover:bg-purple-500/10 transition-colors">
+            <Link href="#contact" className="px-6 py-3 border border-primary-foreground text-primary-foreground rounded-full hover:bg-primary-foreground/10 transition-colors">
               Contact Me
             </Link>
           </motion.div>

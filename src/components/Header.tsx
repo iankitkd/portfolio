@@ -21,17 +21,17 @@ export default function Header() {
           >
             <div className="text-center rounded-full backdrop-blur-sm">
               
-              <div className="flex items-center space-x-8 w-fit px-4 md:px-8 py-3 mx-auto rounded-full bg-gray-950/95 border-b border-purple-800">
+              <div className="flex items-center space-x-8 w-fit px-4 md:px-8 py-3 mx-auto rounded-full bg-background border-b border-primary-border">
                 {
                   navLinks.map(({name, href, Icon}) => (
-                    <Link key={name} href={href} className="hover:text-purple-400 transition-all">
+                    <Link key={name} href={href} className="hover:text-primary-foreground transition-all">
                       <p className="hidden md:block">{name}</p>
                       <Icon className="md:hidden" size={22}/>
                     </Link>
                   ))
                 }
                 <a href={resumeLink} target="_blank" rel="noopener noreferrer" 
-                  className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 hover:opacity-90 transition-opacity"
+                  className="px-3 py-1 rounded-full bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end hover:opacity-90 transition-opacity"
                 >
                   <p className="hidden md:block">Resume</p>
                   <FiFileText className="md:hidden" size={22}/>

@@ -29,8 +29,8 @@ export const contactLinks = [
 ];
 
 export const skills = [
-  { name: 'HTML5', Icon: FaHtml5, color: '#E34F26' },
-  { name: 'CSS3', Icon: FaCss3Alt, color: '#1572B6' },
+  { name: 'HTML', Icon: FaHtml5, color: '#E34F26' },
+  { name: 'CSS', Icon: FaCss3Alt, color: '#1572B6' },
   { name: 'JavaScript', Icon: FaJsSquare, color: '#F7DF1E' },
   { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
   { name: 'React', Icon: FaReact, color: '#61DAFB' },

@@ -5,11 +5,14 @@ import { skills } from '@/data';
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 bg-gray-900 text-white">
+    <section id="skills" className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          Skills
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">
+            Skills
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end mx-auto"></div>
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6">
           {skills.map(({ name, Icon, color }, index) => (
@@ -20,7 +23,7 @@ export default function Skills() {
               transition={{ duration: 0.3, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
-              <div className={`group flex flex-row gap-2 items-center justify-center rounded-full py-3 md:py-4 bg-gray-800 shadow-lg transform hover:scale-[1.02] transition-all hover:bg-gray-700 `}>
+              <div className={`flex flex-row gap-2 items-center justify-center rounded-full py-3 md:py-4 bg-card shadow-lg transform hover:scale-[1.02] transition-all hover:bg-card-hover`}>
                 <Icon className={`w-8 h-8 md:w-10 md:h-10`} color={color} />
                 <p className="md:text-lg font-medium text-center">{name}</p>
               </div>

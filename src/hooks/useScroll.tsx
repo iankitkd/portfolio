@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 
 export default function useScroll() {
-    const [showScrollButton, setShowScrollButton] = useState(false);
+    // const [showScrollButton, setShowScrollButton] = useState(false);
     const [showHeader, setShowHeader] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             // show scroll button when scroll > 100px
-            setShowScrollButton(window.scrollY > 100) 
+            // setShowScrollButton(window.scrollY > 100) 
 
             const currentScrollY = window.scrollY;
 
@@ -26,9 +26,9 @@ export default function useScroll() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
+    // const scrollToTop = () => {
+    //     window.scrollTo({ top: 0, behavior: 'smooth' })
+    // }
 
-    return { showHeader, showScrollButton, scrollToTop }
+    return { showHeader }
 }
