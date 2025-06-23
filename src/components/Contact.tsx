@@ -1,0 +1,31 @@
+"use client"
+import { motion } from 'framer-motion';
+import ContactForm from './ContactForm';
+
+export default function Contact() {
+  return (
+    <section id="contact" className="py-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Have a project in mind or want to discuss opportunities? Feel free to reach out!
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-700 to-purple-500 mx-auto mt-4"></div>
+          </div>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-gray-900/70 rounded-xl p-6 border border-gray-800"
+          >
+            <ContactForm />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
