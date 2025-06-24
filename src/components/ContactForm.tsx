@@ -18,43 +18,41 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [response, setResponse] = useState({success: false, message: ""});
   const {
     register,
     handleSubmit,
-    setValue,
+    reset,
     formState: { errors },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
   });
 
   const sendEmail = async (data: ContactFormValues) => {
-    console.log("Form Data", data);
     setLoading(true);
+    setResponse({success:false, message: ""});
 
     try {  
-      // const response = await fetch("/api/contact", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(data),
-      // });
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-      // const res = await response.json();
-      // if(!res.ok) {
-      //   throw new Error(res.message);
-      // } 
-
-      setSuccess(false);
-      setResponse("Service unavailable.")
-      setValue("name", "");
-      setValue("email", "");
-      setValue("message", "");
+      if(!response.ok) {
+        const res = await response.json();
+        throw new Error(res.message || "Unable to send message");
+      } 
+      
+      setResponse({success:true, message: "Message sent."});
+      reset();
     } catch (error) {
-      setSuccess(false);
-      setResponse(error instanceof Error ? error.message : "Unable to send message.")
+      setResponse({success: false, message: error instanceof Error ? error.message : "Unable to send message."});
     } finally {
       setLoading(false);
+      setTimeout(() => {
+        setResponse({success: false, message: ""});
+      }, 4000);
     }
   };
 
@@ -103,13 +101,14 @@ export default function ContactForm() {
       </div>
 
       <div>
-        {response && (
-          <p className={`pb-1 pl-2 font-medium ${success? "text-green-500": "text-red-500"}`}>{response}</p>
+        {response.message && (
+          <p className={`pb-1 pl-2 font-medium ${response.success? "text-green-500": "text-red-500"}`}>{response.message}</p>
         )}
 
         <button
           type="submit"
-          className="px-8 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground rounded-full hover:opacity-90 transition-opacity"
+          disabled={loading || Object.keys(errors).length > 0}
+          className="px-8 py-3 rounded-full bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground hover:opacity-90 disabled:opacity-50 transition-opacity cursor-pointer"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>

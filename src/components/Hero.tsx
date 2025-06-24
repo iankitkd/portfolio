@@ -14,7 +14,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-primary-foreground mb-4"
+            className="text-primary mb-4"
           >
             Hello, I&apos;m
           </motion.div>
@@ -34,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-2xl md:text-4xl mb-8"
           >
-            Full-Stack <span className="text-primary-foreground">Web Developer</span>
+            Full-Stack <span className="text-primary">Web Developer</span>
           </motion.h2>
 
           <motion.p 

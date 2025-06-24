@@ -2,7 +2,7 @@ import { Background, Contact, Footer, Header, Hero, Projects, Skills } from "@/c
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gradient-start via-gradietn-mid to-gradient-end text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gradient-start via-gradietn-mid to-gradient-end text-foreground transition-colors duration-500 overflow-x-hidden">
       <Background />
       <Header />
       <main>

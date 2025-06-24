@@ -20,6 +20,7 @@ export const navLinks = [
 ];
 
 export const resumeLink = "https://drive.google.com/file/d/1TdymfAvzVaAPo9Aix01NOprshTqTW0gl/view?usp=sharing"
+export const contactEmail = "iankitkd@gmail.com";
 
 export const contactLinks = [
   {name: "github", href: "https://github.com/iankitkd", Icon: FaGithub},
