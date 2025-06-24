@@ -109,7 +109,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="px-8 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end rounded-full hover:opacity-90 transition-opacity"
+          className="px-8 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground rounded-full hover:opacity-90 transition-opacity"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>

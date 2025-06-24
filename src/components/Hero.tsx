@@ -61,10 +61,10 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-wrap gap-4"
           >
-            <Link href="#projects" className="px-6 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end rounded-full hover:opacity-90 transition-opacity">
+            <Link href="#projects" className="px-6 py-3 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground rounded-full hover:opacity-90 transition-opacity">
               View Projects
             </Link>
-            <Link href="#contact" className="px-6 py-3 border border-primary-foreground text-primary-foreground rounded-full hover:bg-primary-foreground/10 transition-colors">
+            <Link href="#contact" className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary/10 transition-colors">
               Contact Me
             </Link>
           </motion.div>

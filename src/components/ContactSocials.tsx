@@ -6,7 +6,7 @@ export default function ContactSocials() {
     <div className="flex space-x-6">
       {
         contactLinks.map(({name, href, Icon}) => (
-          <Link key={name} href={href} className="text-secondary-foreground hover:text-primary-foreground transition-colors">
+          <Link key={name} href={href} className="text-secondary-foreground hover:text-primary transition-colors">
             <Icon className="text-2xl" />
           </Link>
         ))

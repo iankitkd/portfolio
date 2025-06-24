@@ -44,13 +44,13 @@ export default function Projects() {
                 <div className="flex space-x-6">
                   <a 
                     href={project.github} 
-                    className="text-primary-foreground hover:text-primary-hover transition-colors flex items-center"
+                    className="text-primary hover:text-primary-hover transition-colors flex items-center"
                   >
                     <FaGithub className="mr-2" /> GitHub
                   </a>
                   <a 
                     href={project.live} 
-                    className="text-primary-foreground hover:text-primary-hover transition-colors flex items-center"
+                    className="text-primary hover:text-primary-hover transition-colors flex items-center"
                   >
                     <FaExternalLinkAlt className='mr-2' /> Live
                   </a>

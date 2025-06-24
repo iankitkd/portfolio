@@ -23,8 +23,8 @@ export default function Skills() {
               transition={{ duration: 0.3, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
-              <div className={`flex flex-row gap-2 items-center justify-center rounded-full py-3 md:py-4 bg-card shadow-lg transform hover:scale-[1.02] transition-all hover:bg-card-hover`}>
-                <Icon className={`w-8 h-8 md:w-10 md:h-10`} color={color} />
+              <div className={`flex flex-row gap-2 items-center justify-center rounded-full py-3 md:py-4 bg-card shadow-md transform hover:scale-[1.02] transition-all hover:bg-card-hover`}>
+                <Icon className={`w-8 h-8 md:w-10 md:h-10 text-foreground`} color={color} />
                 <p className="md:text-lg font-medium text-center">{name}</p>
               </div>
             </motion.div>
