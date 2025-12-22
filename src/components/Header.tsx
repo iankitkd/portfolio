@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { navLinks, resumeLink } from "@/data";
 import { FiFileText } from "react-icons/fi";
 import useScroll from "@/hooks/useScroll";
-import { ThemeSwitcher } from "./ThemeSwitcher";
+// import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Header() {
   const {showHeader} = useScroll();
@@ -38,7 +38,7 @@ export default function Header() {
                   <FiFileText className="md:hidden" size={22}/>
                 </a>
 
-                <ThemeSwitcher/>
+                {/* <ThemeSwitcher/> */}
               </div>
                                           
             </div>

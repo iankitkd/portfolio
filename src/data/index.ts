@@ -66,7 +66,7 @@ export const projects = [
   {
     title: 'CinePick',
     description: 'A movie and TV show discovery app with category-based browsing, detailed pages with trailers and cast info, and a persistent watchlist.',
-    technologies: ['React', 'Tailwind CSS', 'TMDB API', 'Redux', 'Axios'],
+    technologies: ['React', 'Tailwind CSS', 'TMDB API', 'Redux', 'TanStack Query', 'Axios',],
     github: 'https://github.com/iankitkd/MovieSearchApp',
     live: 'https://cine-pick.vercel.app/',
     image: '/images/cine-pick.png'

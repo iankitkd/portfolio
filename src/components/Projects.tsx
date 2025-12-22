@@ -22,7 +22,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col bg-gradient-to-br from-gradient-start to-gradient-mid rounded-xl overflow-hidden border border-border transition-all duration-300 hover:-translate-y-1"
+              className="flex flex-col bg-gradient-to-br from-gradient-start to-gradient-mid rounded-xl overflow-hidden border border-border transition-all duration-300 hover:-translate-y-1 hover:border-primary-border"
             >
               <div className="relative w-full h-40 overflow-hidden">
                 <Image
