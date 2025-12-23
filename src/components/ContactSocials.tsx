@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { contactLinks } from '@/data';
 
 export default function ContactSocials() {
@@ -6,9 +5,15 @@ export default function ContactSocials() {
     <div className="flex space-x-6">
       {
         contactLinks.map(({name, href, Icon}) => (
-          <Link key={name} href={href} className="text-secondary-foreground hover:text-primary transition-colors">
+          <a
+            key={name} 
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary-foreground hover:text-primary transition-colors"
+          >
             <Icon className="text-2xl" />
-          </Link>
+          </a>
         ))
       }
     </div>

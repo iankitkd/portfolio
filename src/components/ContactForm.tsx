@@ -64,7 +64,7 @@ export default function ContactForm() {
             {...register("name")}
             id="name"
             type="text"
-            className="w-full px-4 py-3 bg-input text-input-foreground rounded-full focus:outline-none focus:ring-1 focus:ring-ring"
+            className="w-full px-4 py-3 bg-input text-input-foreground rounded-2xl focus:outline-none focus:ring-1 focus:ring-ring"
             placeholder="Your name"
         />
         {errors.name && (
@@ -78,7 +78,7 @@ export default function ContactForm() {
             {...register("email")}
             id="email"
             type="email"
-            className="w-full px-4 py-3 bg-input text-input-foreground rounded-full focus:outline-none focus:ring-1 focus:ring-ring"
+            className="w-full px-4 py-3 bg-input text-input-foreground rounded-2xl focus:outline-none focus:ring-1 focus:ring-ring"
             placeholder="your@email.com"
         />
         {errors.email && (
@@ -108,7 +108,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={loading || Object.keys(errors).length > 0}
-          className="px-8 py-3 rounded-full bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground hover:opacity-90 disabled:opacity-50 transition-opacity cursor-pointer"
+          className="px-8 py-3 rounded-2xl bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground hover:opacity-90 disabled:opacity-50 transition-opacity cursor-pointer"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>

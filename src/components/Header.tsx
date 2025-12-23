@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks, resumeLink } from "@/data";
 import { FiFileText } from "react-icons/fi";
@@ -25,10 +24,10 @@ export default function Header() {
               <div className="flex items-center space-x-6 md:space-x-8 w-fit px-4 md:px-8 py-3 mx-auto rounded-full bg-background border-b border-primary-border">
                 {
                   navLinks.map(({name, href, Icon}) => (
-                    <Link key={name} href={href} className="hover:text-primary transition-all">
+                    <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all">
                       <p className="hidden md:block">{name}</p>
                       <Icon className="md:hidden" size={22}/>
-                    </Link>
+                    </a>
                   ))
                 }
                 <a href={resumeLink} target="_blank" rel="noopener noreferrer" 

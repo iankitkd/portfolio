@@ -1,6 +1,6 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaDatabase, FaAws, FaDocker, FaGitAlt, FaFigma, FaCode, FaCubes, FaVial, FaTools, FaCloud, FaPython, FaJava, } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaDatabase, FaAws, FaDocker, FaGitAlt, FaFigma, FaCode, FaCubes, FaTools, FaCloud, FaPython, FaJava, } from 'react-icons/fa';
 import { FiCode, FiGrid, FiSend, FiUser } from 'react-icons/fi';
-import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiRedux, SiMysql, SiRedis, SiPrisma, SiVercel, SiGithubactions, SiPostman, SiJest, SiTestinglibrary, SiCypress, SiKubernetes, SiRadixui, SiCplusplus, SiSentry, SiPrometheus, } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiRedux, SiMysql, SiRedis, SiPrisma, SiVercel, SiGithubactions, SiPostman, SiKubernetes, SiRadixui, SiCplusplus, } from 'react-icons/si';
 import { FaEnvelope, FaGithub, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6';
 import { VscVscode } from 'react-icons/vsc';
 
@@ -24,10 +24,10 @@ export const resumeLink = "https://drive.google.com/file/d/1TdymfAvzVaAPo9Aix01N
 export const contactEmail = "iankitkd@gmail.com";
 
 export const contactLinks = [
-  {name: "github", href: "https://github.com/iankitkd", Icon: FaGithub},
-  {name: "linkedin", href: "https://linkedin.com/in/iankitkd", Icon: FaLinkedin},
-  {name: "x", href: "https://x.com/iankitkd", Icon: FaSquareXTwitter},
-  {name: "email", href: "mailto:iankitkd@gmail.com", Icon: FaEnvelope},
+  {name: "GitHub", href: "https://github.com/iankitkd", Icon: FaGithub},
+  {name: "LinkedIn", href: "https://linkedin.com/in/iankitkd", Icon: FaLinkedin},
+  {name: "X", href: "https://x.com/iankitkd", Icon: FaSquareXTwitter},
+  {name: "Email", href: "mailto:iankitkd@gmail.com", Icon: FaEnvelope},
 ];
 
 
@@ -110,19 +110,19 @@ export const skillCategories = [
     ],
   },
 
-  {
-    category: "Testing & Monitoring",
-    Icon: FaVial,
-    color: "#EF4444",
-    skills: [
-      { name: "Jest", Icon: SiJest, color: "#C21325" },
-      { name: "React Testing Library", Icon: SiTestinglibrary, color: "#E33332" },
-      { name: "Cypress", Icon: SiCypress, color: "" },  // #17202C
-      { name: "Playwright", Icon: FaVial, color: "#2EAD33" },
-      { name: "Sentry", Icon: SiSentry, color: "#362D59" },
-      { name: "Prometheus", Icon: SiPrometheus, color: "#E6522C" },
-    ],
-  },
+  // {
+  //   category: "Testing & Monitoring",
+  //   Icon: FaVial,
+  //   color: "#EF4444",
+  //   skills: [
+  //     { name: "Jest", Icon: SiJest, color: "#C21325" },
+  //     { name: "React Testing Library", Icon: SiTestinglibrary, color: "#E33332" },
+  //     { name: "Cypress", Icon: SiCypress, color: "" },  // #17202C
+  //     { name: "Playwright", Icon: FaVial, color: "#2EAD33" },
+  //     { name: "Sentry", Icon: SiSentry, color: "#362D59" },
+  //     { name: "Prometheus", Icon: SiPrometheus, color: "#E6522C" },
+  //   ],
+  // },
 ];
 
 
@@ -150,6 +150,14 @@ export const projects = [
     github: 'https://github.com/iankitkd/MovieSearchApp',
     live: 'https://cine-pick.vercel.app/',
     image: '/images/cine-pick.png'
+  },
+  {
+    title: 'CoderPort',
+    description: 'A unified dashboard that brings all coding profiles together to track programming progress and growth in one place.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma', 'Auth.js', 'Recharts'],
+    github: 'https://github.com/iankitkd/coderport',
+    live: 'https://coderport.vercel.app/',
+    image: '/images/coderport.png'
   },
   {
     title: 'Connect up',
