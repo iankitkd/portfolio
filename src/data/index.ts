@@ -1,7 +1,8 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaDatabase, FaAws, FaDocker, FaGitAlt, FaFigma, FaCode, FaCubes, FaVial, FaTools, FaCloud, FaPython, FaJava, } from 'react-icons/fa';
 import { FiCode, FiGrid, FiSend, FiUser } from 'react-icons/fi';
-import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiRedux, SiMysql, SiRedis, SiPrisma, SiVercel, SiGithubactions, SiPostman, SiJest, SiTestinglibrary, SiCypress, SiKubernetes, SiRadixui, SiCplusplus, SiSentry, SiPrometheus, } from 'react-icons/si';
 import { FaEnvelope, FaGithub, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6';
+import { VscVscode } from 'react-icons/vsc';
 
 export const fullName = "Ankit Kumar";
 
@@ -29,22 +30,101 @@ export const contactLinks = [
   {name: "email", href: "mailto:iankitkd@gmail.com", Icon: FaEnvelope},
 ];
 
-export const skills = [
-  { name: 'HTML', Icon: FaHtml5, color: '#E34F26' },
-  { name: 'CSS', Icon: FaCss3Alt, color: '#1572B6' },
-  { name: 'JavaScript', Icon: FaJsSquare, color: '#F7DF1E' },
-  { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
-  { name: 'React', Icon: FaReact, color: '#61DAFB' },
-  { name: 'Next.js', Icon: SiNextdotjs, color: '' },
-  { name: 'Node.js', Icon: FaNodeJs, color: '#339933' },
-  { name: 'Express', Icon: SiExpress, color: '' },
-  { name: 'MongoDB', Icon: SiMongodb, color: '#47A248' },
-  { name: 'PostgreSQL', Icon: SiPostgresql, color: '#336791' },
-  // { name: 'Git', Icon: FaGitAlt, color: '#F05032' },
-  // { name: 'Docker', Icon: FaDocker, color: '#2496ED' },
-  // { name: 'AWS', Icon: FaAws, color: '#FF9900' },
-  // { name: 'SQL', Icon: FaDatabase, color: '#336791' },
+
+export const skillCategories = [
+  {
+    category: "Languages",
+    Icon: FaCode,
+    color: "#6366F1",
+    skills: [
+      { name: "Java", Icon: FaJava, color: "#007396" },
+      { name: "Python", Icon: FaPython, color: "#3776AB" },
+      { name: "C / C++", Icon: SiCplusplus, color: "#00599C" },
+      { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+      { name: "JavaScript", Icon: FaJsSquare, color: "#F7DF1E" },
+      { name: "HTML", Icon: FaHtml5, color: "#E34F26" },
+      { name: "CSS", Icon: FaCss3Alt, color: "#1572B6" },
+      { name: "SQL", Icon: FaDatabase, color: "#336791" },
+    ],
+  },
+
+  {
+    category: "Frameworks & Libraries",
+    Icon: FaCubes,
+    color: "#22C55E",
+    skills: [
+      { name: "React", Icon: FaReact, color: "#61DAFB" },
+      { name: "Next.js", Icon: SiNextdotjs, color: "" },
+      { name: "Node.js", Icon: FaNodeJs, color: "#339933" },
+      { name: "Express", Icon: SiExpress, color: "" },
+      { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38BDF8" },
+      { name: "shadcn/ui", Icon: SiRadixui, color: "" },
+      { name: "Redux", Icon: SiRedux, color: "#764ABC" },
+      // { name: "Socket.IO", Icon: SiSocketdotio, color: "" },  // #010101
+      // { name: "Zustand", Icon: SiReact, color: "#61DAFB" },
+      // { name: "Tanstack Query", Icon: SiReactquery, color: "#FF4154" },
+    ],
+  },
+
+  {
+    category: "Databases",
+    Icon: FaDatabase,
+    color: "#F59E0B",
+    skills: [
+      { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+      { name: "PostgreSQL", Icon: SiPostgresql, color: "#336791" },
+      { name: "MySQL", Icon: SiMysql, color: "#4479A1" },
+      { name: "Redis", Icon: SiRedis, color: "#DC382D" },
+      { name: "Prisma", Icon: SiPrisma, color: "" },  //#2D3748
+      { name: "Mongoose", Icon: SiMongodb, color: "#880000" },
+    ],
+  },
+
+
+  {
+    category: "Cloud & DevOps",
+    Icon: FaCloud,
+    color: "#38BDF8",
+    skills: [
+      { name: "AWS", Icon: FaAws, color: "#FF9900" },
+      { name: "Docker", Icon: FaDocker, color: "#2496ED" },
+      { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
+      { name: "Vercel", Icon: SiVercel, color: "#000000" },
+      // { name: "Netlify", Icon: SiNetlify, color: "#00C7B7" },
+      { name: "CI/CD", Icon: SiGithubactions, color: "#2088FF" },
+    ],
+  },
+
+  {
+    category: "Tools",
+    Icon: FaTools,
+    color: "#A855F7",
+    skills: [
+      { name: "Git", Icon: FaGitAlt, color: "#F05032" },
+      { name: "GitHub", Icon: FaGithub, color: "" },  // #181717
+      { name: "VS Code", Icon: VscVscode, color: "#007ACC" },
+      { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
+      { name: "Figma", Icon: FaFigma, color: "#F24E1E" },
+      // { name: "ESLint", Icon: SiEslint, color: "#4B32C3" },
+      // { name: "Prettier", Icon: SiPrettier, color: "#F7B93E" },
+    ],
+  },
+
+  {
+    category: "Testing & Monitoring",
+    Icon: FaVial,
+    color: "#EF4444",
+    skills: [
+      { name: "Jest", Icon: SiJest, color: "#C21325" },
+      { name: "React Testing Library", Icon: SiTestinglibrary, color: "#E33332" },
+      { name: "Cypress", Icon: SiCypress, color: "" },  // #17202C
+      { name: "Playwright", Icon: FaVial, color: "#2EAD33" },
+      { name: "Sentry", Icon: SiSentry, color: "#362D59" },
+      { name: "Prometheus", Icon: SiPrometheus, color: "#E6522C" },
+    ],
+  },
 ];
+
 
 export const projects = [
   {

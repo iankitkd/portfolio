@@ -11,6 +11,9 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Latest Projects</h2>
+          <p className="text-lg text-secondary-foreground max-w-xl mx-auto mb-4">
+            A selection of work highlighting my development expertise.
+          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end mx-auto"></div>
         </div>
         

@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-secondary-foreground max-w-xl mx-auto">
+            <p className="text-lg text-secondary-foreground max-w-2xl mx-auto">
               Have a project in mind or want to discuss opportunities? Feel free to reach out!
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end mx-auto mt-4"></div>
