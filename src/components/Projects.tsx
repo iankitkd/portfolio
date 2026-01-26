@@ -41,18 +41,20 @@ export default function Projects() {
                 <p className="text-secondary-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-card rounded-full text-sm">{tech}</span>
+                    <span key={idx} className="px-3 py-1 bg-card rounded-full text-secondary-foreground text-sm">{tech}</span>
                   ))}
                 </div>
                 <div className="flex space-x-6">
                   <a 
                     href={project.github} 
+                    target='_blank'
                     className="text-primary hover:text-primary-hover transition-colors flex items-center"
                   >
                     <FaGithub className="mr-2" /> GitHub
                   </a>
                   <a 
                     href={project.live} 
+                    target='_blank'
                     className="text-primary hover:text-primary-hover transition-colors flex items-center"
                   >
                     <FaExternalLinkAlt className='mr-2' /> Live

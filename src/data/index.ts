@@ -1,6 +1,6 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaDatabase, FaAws, FaDocker, FaGitAlt, FaFigma, FaCode, FaCubes, FaTools, FaCloud, FaPython, FaJava, } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaDatabase, FaAws, FaDocker, FaGitAlt, FaFigma, FaCode, FaCubes, FaTools, FaCloud, FaPython, FaJava, FaVial, } from 'react-icons/fa';
 import { FiCode, FiGrid, FiSend, FiUser } from 'react-icons/fi';
-import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiRedux, SiMysql, SiRedis, SiPrisma, SiVercel, SiGithubactions, SiPostman, SiKubernetes, SiRadixui, SiCplusplus, } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiRedux, SiMysql, SiRedis, SiPrisma, SiVercel, SiGithubactions, SiPostman, SiKubernetes, SiRadixui, SiCplusplus, SiTestinglibrary, SiPrometheus, SiVitest, SiGrafana, } from 'react-icons/si';
 import { FaEnvelope, FaGithub, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6';
 import { VscVscode } from 'react-icons/vsc';
 
@@ -110,25 +110,38 @@ export const skillCategories = [
     ],
   },
 
-  // {
-  //   category: "Testing & Monitoring",
-  //   Icon: FaVial,
-  //   color: "#EF4444",
-  //   skills: [
-  //     { name: "Jest", Icon: SiJest, color: "#C21325" },
-  //     { name: "React Testing Library", Icon: SiTestinglibrary, color: "#E33332" },
-  //     { name: "Cypress", Icon: SiCypress, color: "" },  // #17202C
-  //     { name: "Playwright", Icon: FaVial, color: "#2EAD33" },
-  //     { name: "Sentry", Icon: SiSentry, color: "#362D59" },
-  //     { name: "Prometheus", Icon: SiPrometheus, color: "#E6522C" },
-  //   ],
-  // },
+  {
+    category: "Testing & Monitoring",
+    Icon: FaVial,
+    color: "#EF4444",
+    skills: [
+      // { name: "Jest", Icon: SiJest, color: "#C21325" },
+      { name: "Vitest", Icon: SiVitest, color: "#6E9F18" },
+      { name: "React Testing Library", Icon: SiTestinglibrary, color: "#E33332" },
+      { name: "Playwright", Icon: FaVial, color: "#2EAD33" },
+      { name: "Prometheus", Icon: SiPrometheus, color: "#E6522C" },
+      { name: "Grafana", Icon: SiGrafana, color: "#F46800" },
+      // { name: "Cypress", Icon: SiCypress, color: "" },  // #17202C
+      // { name: "Datadog", Icon: SiDatadog, color: "#632CA6" },
+      // { name: "New Relic", Icon: SiNewrelic, color: "#1CE783" },
+      // { name: "Sentry", Icon: SiSentry, color: "#362D59" },
+    ],
+  },
 ];
 
 
 export const projects = [
   {
-    title: 'Feed',
+    title: 'Assetly',
+    description: 'A full-stack digital asset marketplace with secure authentication, creator payouts via Stripe, and role-based access.',
+    // description: 'A digital asset marketplace enabling creators to sell and users to purchase digital assets securely.',
+    technologies: ['Next.js', 'TypeScript', 'Material UI', 'PostgreSQL', 'Prisma', 'Supabase', 'Auth.js', 'Stripe'],
+    github: 'https://github.com/iankitkd/assetly',
+    live: 'https://assetlyapp.vercel.app/',
+    image: '/images/assetly.png'
+  },
+  {
+    title: 'Feed Social',
     description: 'A social media platform with secure authentication, post creation, likes, replies, and real-time messaging.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'MongoDB', 'Express', 'Socket.IO'],
     github: 'https://github.com/iankitkd/SocialMediaApp',
@@ -136,9 +149,17 @@ export const projects = [
     image: '/images/feed-social.png'
   },
   {
+    title: 'CoderPort',
+    description: 'A unified dashboard that brings all coding profiles together to track programming progress and growth in one place.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma', 'Auth.js', 'Recharts'],
+    github: 'https://github.com/iankitkd/coderport',
+    live: 'https://coderport.vercel.app/',
+    image: '/images/coderport.png'
+  },
+  {
     title: 'RF Check',
     description: 'A fact-checking web app that verifies text authenticity (real or fake) using AI models and OCR and give result with detail explanation.',
-    technologies: ['Next.js', 'Tailwind CSS', 'Gemini API', 'DeepSeek API'],
+    technologies: ['Next.js', 'Tailwind CSS', 'Gemini API', 'OpenRouter'],
     github: 'https://github.com/iankitkd/rf-check',
     live: 'https://rfcheck.vercel.app/',
     image: '/images/rfcheck.png'
@@ -152,16 +173,8 @@ export const projects = [
     image: '/images/cine-pick.png'
   },
   {
-    title: 'CoderPort',
-    description: 'A unified dashboard that brings all coding profiles together to track programming progress and growth in one place.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma', 'Auth.js', 'Recharts'],
-    github: 'https://github.com/iankitkd/coderport',
-    live: 'https://coderport.vercel.app/',
-    image: '/images/coderport.png'
-  },
-  {
     title: 'Connect up',
-    description: 'A real-time chat application with user authentication, media messaging, AI assistant integration, and theme customization.',
+    description: 'A real-time chat application with user authentication, media messaging and AI assistant integration.',
     technologies: ['React', 'Tailwind CSS', 'Firebase Authentication', 'Firestore', 'Gemini API', 'Redux'],
     github: 'https://github.com/iankitkd/ChatApp',
     live: 'https://connectup.vercel.app/',

@@ -2,7 +2,7 @@ import { contactLinks } from "@/data";
 
 export default function ContactInfo() {
   return (
-    <div className="flex flex-col justify-center gap-4 bg-background/30 rounded-2xl p-4 md:p-8 border border-border max-w-xl">
+    <div className="flex flex-col gap-4">
       {/* <div className="flex items-center gap-4">
         <span className="flex-1 h-px bg-gradient-to-r from-transparent to-primary" />
         <span className="text-sm md:text-base text-secondary-foreground font-medium tracking-wide whitespace-nowrap">

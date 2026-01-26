@@ -22,12 +22,21 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-background/30 rounded-xl p-3 md:p-6 border border-border"
+              className="bg-background/30 rounded-2xl p-3 md:p-6 border border-border max-w-xl"
             >
               <ContactForm />
             </motion.div>
 
-            <ContactInfo/>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-background/30 rounded-2xl p-3 md:p-6 border border-border max-w-xl flex flex-col justify-center"
+            >
+              <ContactInfo/>
+            </motion.div>
+
           </div>
         </div>
       {/* </div> */}

@@ -67,10 +67,10 @@ function SkillCategoryCard({ category, Icon, color, skills, index }: SkillCatego
         {skills.map(({ name, Icon, color }) => (
           <div
             key={name}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium bg-card hover:bg-card-hover hover:scale-[1.03] duration-300 transition-transform"
+            className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-sm font-medium bg-card hover:bg-card-hover hover:scale-[1.03] duration-300 transition-transform"
           >
             <Icon className="w-4 h-4" color={color} />
-            <span>{name}</span>
+            <span className='text-secondary-foreground'>{name}</span>
           </div>
         ))}
       </div>
