@@ -1,9 +1,10 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion";
-import { navLinks, resumeLink } from "@/data";
+import { navLinks, resumeUrl } from "@/data";
 import { FiFileText } from "react-icons/fi";
 import useScroll from "@/hooks/useScroll";
+import Link from "next/link";
 // import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Header() {
@@ -24,18 +25,21 @@ export default function Header() {
               <div className="flex items-center space-x-6 md:space-x-8 w-fit px-4 md:px-8 py-3 mx-auto rounded-full bg-background border-b border-primary-border">
                 {
                   navLinks.map(({name, href, Icon}) => (
-                    <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all">
+                    <Link key={name} href={href} className="hover:text-primary transition-all">
                       <p className="hidden md:block">{name}</p>
                       <Icon className="md:hidden" size={22}/>
-                    </a>
+                    </Link>
                   ))
                 }
-                <a href={resumeLink} target="_blank" rel="noopener noreferrer" 
+                <Link 
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-3 py-1 rounded-full bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end text-primary-foreground hover:opacity-90 transition-opacity"
                 >
                   <p className="hidden md:block">Resume</p>
                   <FiFileText className="md:hidden" size={22}/>
-                </a>
+                </Link>
 
                 {/* <ThemeSwitcher/> */}
               </div>
