@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion";
-import { navLinks, resumeUrl } from "@/data";
+import { navLinks } from "@/data";
 import { FiFileText } from "react-icons/fi";
 import useScroll from "@/hooks/useScroll";
 import Link from "next/link";

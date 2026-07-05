@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaDatabase, FaAws, FaDocker, FaGitAlt, FaFigma, FaCode, FaCubes, FaTools, FaCloud, FaPython, FaJava, FaVial, } from 'react-icons/fa';
-import { FiCode, FiGrid, FiSend, FiUser } from 'react-icons/fi';
+import { FiBriefcase, FiCode, FiGrid, FiSend, FiUser } from 'react-icons/fi';
 import { SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiRedux, SiMysql, SiRedis, SiPrisma, SiVercel, SiGithubactions, SiPostman, SiKubernetes, SiRadixui, SiCplusplus, SiTestinglibrary, SiPrometheus, SiVitest, SiGrafana, } from 'react-icons/si';
 import { FaEnvelope, FaGithub, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6';
 import { VscVscode } from 'react-icons/vsc';
@@ -16,6 +16,7 @@ export const heroData = {
 export const navLinks = [
   { name: "About", href: "#", Icon: FiUser },
   { name: "Skills", href: "#skills", Icon: FiCode },
+  { name: "Experience", href: "#experience", Icon: FiBriefcase },
   { name: "Projects", href: "#projects", Icon: FiGrid },
   { name: "Contact", href: "#contact", Icon: FiSend },
 ];
@@ -130,6 +131,27 @@ export const skillCategories = [
   },
 ];
 
+
+export const experienceData = [
+  {
+    role: "SDE Intern",
+    company: "Qobo",
+    period: "Apr 2026 - Jun 2026",
+    location: "Remote",
+    description: [
+      "Developed and maintained scalable React-based web applications for production use.",
+      "Integrated 15+ REST APIs supporting authentication, dashboards and product management.",
+      "Built reusable UI components to improve consistency and development speed.",
+      "Optimized frontend performance through lazy loading and efficient API handling, reducing page load time by 25%.",
+    ],
+    highlights: [
+      "React",
+      "REST APIs",
+      "Performance Optimization",
+      "Responsive UI",
+    ],
+  },
+];
 
 export const projects = [
   {
