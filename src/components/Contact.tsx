@@ -6,21 +6,20 @@ import SectionHeader from '@/components/SectionHeader';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
-        {/* <div className="max-w-3xl mx-auto"> */}
         <SectionHeader 
           title="Get In Touch" 
-          description="Have a project in mind or want to discuss opportunities? Feel free to reach out!" 
+          description="Have a project in mind or want to discuss opportunities? Send a note and I will get back to you." 
         />
           
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-background/30 rounded-2xl p-3 md:p-6 border border-border max-w-xl"
+              className="rounded-2xl border border-border bg-card/80 p-4 shadow-xl shadow-black/10 backdrop-blur md:p-6"
             >
               <ContactForm />
             </motion.div>
@@ -30,14 +29,13 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-background/30 rounded-2xl p-3 md:p-6 border border-border max-w-xl flex flex-col justify-center"
+              className="flex flex-col justify-center rounded-2xl border border-border bg-card/80 p-4 shadow-xl shadow-black/10 backdrop-blur md:p-6"
             >
               <ContactInfo/>
             </motion.div>
 
           </div>
         </div>
-      {/* </div> */}
     </section>
   );
 }

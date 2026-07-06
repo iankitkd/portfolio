@@ -8,14 +8,14 @@ import SectionHeader from "@/components/SectionHeader";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 bg-background/50">
+    <section id="projects" className="bg-background/45 py-20">
       <div className="container mx-auto px-4">
         <SectionHeader
           title="Latest Projects"
           description="A selection of work highlighting my development expertise."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -23,46 +23,57 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col bg-gradient-to-br from-gradient-start to-gradient-mid rounded-xl overflow-hidden border border-border transition-all duration-300 hover:-translate-y-1 hover:border-primary-border"
+              className={`group flex flex-col overflow-hidden rounded-2xl border border-border bg-card/80 shadow-xl shadow-black/10 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:bg-card ${
+                index < 2 ? "lg:col-span-3" : "lg:col-span-2"
+              }`}
             >
-              <div className="relative w-full h-40 overflow-hidden">
+              <div
+                className={`${index < 2 ? "h-48 lg:h-64" : "h-48"} relative w-full overflow-hidden border-b border-border`}
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                {index < 2 && (
+                  <div className="absolute left-4 top-4 rounded-full border border-primary/30 bg-background/80 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
+                    Featured
+                  </div>
+                )}
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-secondary-foreground mb-4">
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="mb-3 text-2xl font-bold">{project.title}</h3>
+                <p className="mb-5 leading-7 text-secondary-foreground">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="mb-6 flex flex-wrap gap-2">
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-card rounded-full text-secondary-foreground text-sm"
+                      className="rounded-xl border border-border/70 bg-background/60 px-3 py-1.5 text-sm text-secondary-foreground"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex space-x-6">
+                <div className="mt-auto flex gap-3">
                   <a
                     href={project.github}
                     target="_blank"
-                    className="text-primary hover:text-primary-hover transition-colors flex items-center"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-border bg-background/70 px-4 py-2 text-sm font-semibold text-secondary-foreground transition hover:border-primary/50 hover:text-primary"
                   >
-                    <FaGithub className="mr-2" /> GitHub
+                    <FaGithub /> GitHub
                   </a>
                   <a
                     href={project.live}
                     target="_blank"
-                    className="text-primary hover:text-primary-hover transition-colors flex items-center"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-95"
                   >
-                    <FaExternalLinkAlt className="mr-2" /> Live
+                    <FaExternalLinkAlt /> Live Demo
                   </a>
                 </div>
               </div>

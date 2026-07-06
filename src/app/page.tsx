@@ -11,10 +11,10 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gradient-start via-gradietn-mid to-gradient-end text-foreground transition-colors duration-500 overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden text-foreground transition-colors duration-500">
       <Background />
       <Header />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Skills />
         <Experience />

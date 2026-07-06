@@ -6,12 +6,10 @@ export default function SectionHeader({
   description: string;
 }) {
   return (
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-bold mb-4">{title}</h2>
-      <p className="text-lg text-secondary-foreground max-w-2xl mx-auto mb-4">
-        {description}
-      </p>
-      <div className="w-24 h-1 bg-gradient-to-r from-gradient-accent-start to-gradient-accent-end mx-auto"></div>
+    <div className="mb-12 max-w-3xl">
+      <div className="mb-4 h-1 w-16 rounded-full bg-linear-to-r from-gradient-accent-start to-gradient-accent-end" />
+      <h2 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+      <p className="text-lg leading-8 text-muted-foreground">{description}</p>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { contactLinks } from '@/data';
 
 export default function ContactSocials() {
   return (
-    <div className="flex space-x-6">
+    <div className="flex gap-3">
       {
         contactLinks.map(({name, href, Icon}) => (
           <a
@@ -10,7 +10,8 @@ export default function ContactSocials() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary-foreground hover:text-primary transition-colors"
+            aria-label={name}
+            className="rounded-xl border border-border bg-card/70 p-3 text-secondary-foreground transition hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
           >
             <Icon className="text-2xl" />
           </a>
