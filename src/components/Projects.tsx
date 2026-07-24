@@ -23,9 +23,8 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`group flex flex-col overflow-hidden rounded-2xl border border-border bg-card/80 shadow-xl shadow-black/10 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:bg-card ${
-                index < 2 ? "lg:col-span-3" : "lg:col-span-2"
-              }`}
+              className={`group flex flex-col overflow-hidden rounded-2xl border border-border bg-card/80 shadow-xl shadow-black/10 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:bg-card ${index < 2 ? "lg:col-span-3" : "lg:col-span-2"
+                }`}
             >
               <div
                 className={`${index < 2 ? "h-48 lg:h-64" : "h-48"} relative w-full overflow-hidden border-b border-border`}
@@ -34,7 +33,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {index < 2 && (

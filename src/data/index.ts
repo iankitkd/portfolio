@@ -215,6 +215,22 @@ export const experienceData = [
 
 export const projects = [
   {
+    title: "Dayloom",
+    description:
+      "AI-powered productivity platform featuring task management, notes, calendar integration and an intelligent AI copilot.",
+    technologies: [
+      "React Native",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "Google Gemini",
+      "TanStack Query",
+    ],
+    github: "https://github.com/iankitkd/dayloom",
+    live: "https://mydayloom.vercel.app/",
+    image: "/images/dayloom.png",
+  },
+  {
     title: "Assetly",
     description:
       "A full-stack digital asset marketplace with secure authentication, creator payouts via Stripe, and role-based access.",
@@ -292,20 +308,20 @@ export const projects = [
     live: "https://cine-pick.vercel.app/",
     image: "/images/cine-pick.png",
   },
-  {
-    title: "Connect up",
-    description:
-      "A real-time chat application with user authentication, media messaging and AI assistant integration.",
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "Firebase Authentication",
-      "Firestore",
-      "Gemini API",
-      "Redux",
-    ],
-    github: "https://github.com/iankitkd/ChatApp",
-    live: "https://connectup.vercel.app/",
-    image: "/images/connectup.png",
-  },
+  // {
+  //   title: "Connect up",
+  //   description:
+  //     "A real-time chat application with user authentication, media messaging and AI assistant integration.",
+  //   technologies: [
+  //     "React",
+  //     "Tailwind CSS",
+  //     "Firebase Authentication",
+  //     "Firestore",
+  //     "Gemini API",
+  //     "Redux",
+  //   ],
+  //   github: "https://github.com/iankitkd/ChatApp",
+  //   live: "https://connectup.vercel.app/",
+  //   image: "/images/connectup.png",
+  // },
 ];
